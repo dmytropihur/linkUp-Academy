@@ -5,7 +5,7 @@ const hasHiddenFee = (arr, str) => {
     return (prev += curr);
   });
 
-  return sum === newStr ? false : true;
+  return sum !== newStr;
 };
 
 console.log(hasHiddenFee(['$1'], '$4'));
