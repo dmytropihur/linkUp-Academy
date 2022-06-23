@@ -6,7 +6,7 @@ const tempConversion = (num) => {
   const fahrenheit = parseFloat(((num * 9) / 5 + 32).toFixed(2));
   const kelvin = parseFloat((num + 273.15).toFixed(2));
 
-  return [fahrenheit, kelvin];
+  return kelvin < 0 ? 'Invalid' : [fahrenheit, kelvin];
 };
 
-console.log(tempConversion(26.85));
+console.log(tempConversion(-273.16));
